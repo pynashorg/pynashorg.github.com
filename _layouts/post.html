@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div id="post">
+    <h4>{{page.title}}</h4>
+{{ content }}
+</div>
+<div id="meta">
+    by {{page.author}} on {{ page.date | date_to_string }}
+</div>
+{% if site.related_posts != empty %}
+<div id="related">
+  <h5>Related Posts</h5>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

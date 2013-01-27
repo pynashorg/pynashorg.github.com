@@ -1,0 +1,15 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://pynashorg.github.com
+title: PyNash
+subtitle: Nashville Python User Group.
+author: Matt George
+simple_search: http://google.com/search
+description:
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+

@@ -1,0 +1,11 @@
+---
+layout: default
+title: PyNash - The Nashville Python User Group
+---
+<div class="row-fluid">
+    <ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> by {{post.author}}</li>
+    {% endfor %}
+</ul>
+</div>

@@ -10,7 +10,7 @@ This is the PyNash web site, now live at:
 Add a file in the `_posts` directory.
 
 
-## How to run this site on your machine.
+## How to run this site on your machine (without affecting the system ruby install)
 
 1. If you haven't already, clone this repo.
 2. If you haven't already got it, install rvm and enable it in your shell. (I installed it in my home directory and it worked fine.)

@@ -3,6 +3,7 @@ layout: post
 title: The idea generator
 author: Jason Orendorff
 ---
+
 Welcome to the PyNash group blog!
 This is a little contest by the Nashville Python user group.
 We&rsquo;ll be posting new content daily, Tuesday through Friday,

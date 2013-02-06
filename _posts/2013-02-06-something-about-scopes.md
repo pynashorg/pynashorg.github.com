@@ -93,4 +93,4 @@ But, don't. Don't do any of these things, please. We're just having fun here.
 Next?
 -----
 
-Maybe next Tuesday I'll talk about stuff you can do with `import`.
+Maybe next Wednesday I'll talk about stuff you can do with `import`.

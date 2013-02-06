@@ -61,7 +61,7 @@ Well, you could do something like ...
     bar
 
 Which brings up an interesting point. The Python docs state that "all variables found outside of the innermost scope
-are read-only" - except that the global state is implemented as a dictionary, so you can do this:
+are read-only" - except that the global namespace is implemented as a dictionary, so you can do this:
 
     >>> def print_foo():
     ...     foo = 'foo'

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:
+title: Something about Scopes
 author: Scot Clausing
 ---
 

@@ -4,9 +4,6 @@ title: Something about Scopes
 author: Scot Clausing
 ---
 
-Something about Scopes
-======================
-
 The following code is tested with Python 2.7.x. Please fill me in on any differences in Python 3.x or earlier versions!
 
 What do you think will happen when `print_foo()` is called below?
@@ -31,10 +28,10 @@ BOOM. And this error is where the journey begins.
 Watch and read these:
 ---------------------
 
-* Python Epiphanies: http://www.youtube.com/watch?v=Pi9NpxAvYSs
-* Understanding Python: http://www.youtube.com/watch?v=E_kZDvwofHY
-* Why does Python run faster in a function? http://stackoverflow.com/questions/11241523/why-does-python-code-run-faster-in-a-function
-* Python Scopes and Namespaces: http://docs.python.org/2/tutorial/classes.html#python-scopes-and-namespaces
+* [Python Epiphanies](http://www.youtube.com/watch?v=Pi9NpxAvYSs) (a PyCon talk, ~2hr)
+* [Understanding Python](http://www.youtube.com/watch?v=E_kZDvwofHY) (Google tech talk, ~1hr)
+* [Why does Python run faster in a function?](http://stackoverflow.com/questions/11241523/why-does-python-code-run-faster-in-a-function) (StackOverflow question)
+* [Python Scopes and Namespaces](http://docs.python.org/2/tutorial/classes.html#python-scopes-and-namespaces)
 
 So, what happened?
 ------------------

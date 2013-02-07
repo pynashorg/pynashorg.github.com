@@ -29,12 +29,13 @@ If you&rsquo;re on Windows, these commands won&rsquo;t work for you.
     rvm gemset create pynashorg
     rvm use @pynashorg
     gem install jekyll
-    jekyll --server
+    jekyll --server --auto
 
-After changing a blog post or other file, you&rsqou;ll have to restart jekyll.
-This is because jekyll works by generating a gitignored `_site` directory
-that contains the complete static web site.
-Once jekyll is done generating the `_site` files,
-it ignores any subsequent changes to source files.
+Ctrl-C to kill it.
+
+Now that everything&rsquo;s set up, you just need two commands:
+
+    rvm use @pynashorg
+    jekyll --server --auto
 
 If you need help, contact jason dot orendorff at gmail.

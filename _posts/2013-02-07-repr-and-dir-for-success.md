@@ -2,6 +2,7 @@
 layout: post
 title: repr and dir for success
 author: Ryan Macy
+comments: true
 ---
 
 ##你好 (Hello!)

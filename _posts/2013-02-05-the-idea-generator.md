@@ -2,6 +2,7 @@
 layout: post
 title: The idea generator
 author: Jason Orendorff
+comments: true
 ---
 
 Welcome to the PyNash group blog!

@@ -50,9 +50,9 @@ As you can see our representation allowed eval to return a perfect copy assigned
 
 You may be asking yourself, "What if I don't define repr on my objects?". Python has a default return value for repr that isn't very useful. Python is known for useful and sensible defaults, however, deciding what an appropriate representation of _your_ object is would be quite impractical; the core developers decided to go a different route and return the objects name, type, and memory address.
 
-	>>>class Example(object):
-	...	pass
-	>>>repr(Example())
+	>>> class Example(object):
+	... 	pass
+	>>> repr(Example())
 	'<__main__.Example object at 0x107ac77d0>'
 	>>>
 
@@ -60,7 +60,7 @@ As you can see it's a good idea to _always_ define repr on your objects, and sho
 
 repr has other uses besides allowing eval to recreate an object. For instance, when you log actions in your program, it often is helpful to see the object in question.
 
-	>>>log.debug("Created an Name: %r" % Name("Ryan'))
+	>>> log.debug("Created an Name: %r" % Name("Ryan'))
 	>>>
 
 Another great use is testing. You may want to assert that the object created matches the object you expect. Remember our _a_ object created earlier? Lets assert that it matches our expectations:
@@ -90,15 +90,15 @@ Using our _a_ object that we defined previously, lets take a look at dir output 
 
 Or when called without an argument:
 
-	>>>dir()
+	>>> dir()
 	['__builtins__', '__doc__', '__name__', '__package__', 'help', 'a', 'b', 'Hello']
 	>>>
 
 Or with a function:
 
-	>>>def a():
-	...	pass
-	>>>dir(a)
+	>>> def a():
+	... 	pass
+	>>> dir(a)
 	['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
 	>>>
 

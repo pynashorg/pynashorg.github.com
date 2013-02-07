@@ -17,7 +17,9 @@ Let's begin.
 
 The premise is simple. repr is supposed to give a string representation of your python objects which should allow [eval](http://docs.python.org/2/library/functions.html#eval) to recreate it. repr calls the dunder repr method of an object if you've defined it. repr is incredibly helpful when debugging your python programs. It can also be used to pass around stringified objects that can be later recreated with eval, though this is often frowned upon. A good example of this behavior would be a simple job queue, that instead of [pickling](http://docs.python.org/2/library/pickle.html) and storing the object, created a string version that gets stored and ran when its position in the queue is reached. Use caution with eval, as it will execute any valid stringified python statement passed to it.
 
+
 >Note: Sometimes it's impractical to return a completely perfect representation of the object, try to capture its essence and as always, use your best judgement.
+
 
 Here's an example:
 
@@ -48,14 +50,14 @@ As you can see our representation allowed eval to return a perfect copy assigned
 You may be asking yourself, "What if I don't define repr on my objects?". Python has a default return value for repr that isn't very useful. Python is known for useful and sensible defaults, however, deciding what an appropriate representation of _your_ object is would be quite impractical; the core developers decided to go a different route and return the objects name, type, and memory address.
 
 	>>>class Example(object):
-	…		pass
+	…	pass
 	>>>repr(Example())
 	'<__main__.Example object at 0x107ac77d0>'
 	>>>
 
 As you can see it's a good idea to _always_ define repr on your objects, and should be second nature.
 
-repr has other uses besides allowing eval to recreate it. For instance, when you log actions in your program, it often is helpful to see the object in question.
+repr has other uses besides allowing eval to recreate an object. For instance, when you log actions in your program, it often is helpful to see the object in question.
 
 	>>>log.debug("Created an Name: %r" % Name("Ryan'))
 	>>>
@@ -79,7 +81,7 @@ Taken from the docs:
 - If the object is a type or class object, the list contains the names of its attributes, and recursively of the attributes of its bases.
 - Otherwise, the list contains the object’s attributes’ names, the names of its class’s attributes, and recursively of the attributes of its class’s base classes.
 
-Using our _a_ object that we defined previously, lets take a look at dir when passed an object:
+Using our _a_ object that we defined previously, lets take a look at dir output when passed an object:
 
 	>>> dir(a)
 	['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'name', 'speak']
@@ -94,10 +96,14 @@ Or when called without an argument:
 Or with a function:
 
 	>>>def a():
-	…		pass
+	…	pass
 	>>>dir(a)
 	['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
 	>>>
+
+
+> Note: dir will alphabetically sort its output.
+
 
 dir becomes very helpful when you want to inspect a foreign module or object in the repl, but can also be used for introspection. dir is a fairly straight forward builtin and I really recommend spending some time tinkering with it in the python repl.
 

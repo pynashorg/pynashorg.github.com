@@ -2,6 +2,7 @@
 layout: post
 title: Coming Soon
 author: Matt George
+comments: true
 ---
 We are in the process of getting setup so community members can add blog posts. If all goes according to plan, 
 our goal is to have at least 5 people sign up as writers. Each writier will write one post per week. The rules for each post 

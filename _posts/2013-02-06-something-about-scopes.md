@@ -2,6 +2,7 @@
 layout: post
 title: Something about Scopes
 author: Scot Clausing
+comments: true
 ---
 
 The following code is tested with Python 2.7.x. Please fill me in on any differences in Python 3.x or earlier versions!

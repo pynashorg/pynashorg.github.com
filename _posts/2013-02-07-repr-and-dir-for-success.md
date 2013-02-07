@@ -24,25 +24,25 @@ The premise is simple. repr is supposed to give a string representation of your 
 
 Here's an example:
 
- 	>>>class Hello(object):
-	…	def __init__(self, name):
-	…		self.name = name
-	…	def speak(self):
-	…		print "Hi, %r" % self.name
-	…	def __repr__(self):
-	…		return "Hello(name=%r)" % self.name
-	>>>a = Hello("Ryan")
-	>>>a.speak()
+ 	>>> class Hello(object):
+	... 	def __init__(self, name):
+	... 		self.name = name
+	... 	def speak(self):
+	... 		print "Hi, %r" % self.name
+	... 	def __repr__(self):
+	... 		return "Hello(name=%r)" % self.name
+	>>> a = Hello("Ryan")
+	>>> a.speak()
 	Hi, 'Ryan'
-	>>>repr(a)
-	Hello(name='Ryan')
-	>>>b = eval(repr(a))
-	>>>b.speak()
+	>>> repr(a)
+	"Hello(name='Ryan')"
+	>>> b = eval(repr(a))
+	>>> b.speak()
 	Hi, 'Ryan'
-	>>>b.name = 'Bob'
-	>>>b.speak()
+	>>> b.name = 'Bob'
+	>>> b.speak()
 	Hi, 'Bob'
-	>>>a.speak()
+	>>> a.speak()
 	Hi, 'Ryan'
 	>>>
 
@@ -50,9 +50,9 @@ As you can see our representation allowed eval to return a perfect copy assigned
 
 You may be asking yourself, "What if I don't define repr on my objects?". Python has a default return value for repr that isn't very useful. Python is known for useful and sensible defaults, however, deciding what an appropriate representation of _your_ object is would be quite impractical; the core developers decided to go a different route and return the objects name, type, and memory address.
 
-	>>>class Example(object):
-	…	pass
-	>>>repr(Example())
+	>>> class Example(object):
+	... 	pass
+	>>> repr(Example())
 	'<__main__.Example object at 0x107ac77d0>'
 	>>>
 
@@ -60,7 +60,7 @@ As you can see it's a good idea to _always_ define repr on your objects, and sho
 
 repr has other uses besides allowing eval to recreate an object. For instance, when you log actions in your program, it often is helpful to see the object in question.
 
-	>>>log.debug("Created an Name: %r" % Name("Ryan'))
+	>>> log.debug("Created an Name: %r" % Name("Ryan'))
 	>>>
 
 Another great use is testing. You may want to assert that the object created matches the object you expect. Remember our _a_ object created earlier? Lets assert that it matches our expectations:
@@ -68,7 +68,7 @@ Another great use is testing. You may want to assert that the object created mat
 	>>> assert repr(a) == "Hello(name='Ryan')"
 	>>>
 
-An interesting aspect of repr is that when you call str(MyClass) on an object that has no str method defined, it will use that objects repr method if defined -- otherwise the default repr return value will be used.
+An interesting aspect of repr is that when you call str(MyClass) on an object that has no str method defined, it will use that object’s repr method if defined -- otherwise the default repr return value will be used.
 
 Refer to the additional reading below and the [docs](http://docs.python.org/2.7) for more in depth information about repr.
 
@@ -90,15 +90,15 @@ Using our _a_ object that we defined previously, lets take a look at dir output 
 
 Or when called without an argument:
 
-	>>>dir()
+	>>> dir()
 	['__builtins__', '__doc__', '__name__', '__package__', 'help', 'a', 'b', 'Hello']
 	>>>
 
 Or with a function:
 
-	>>>def a():
-	…	pass
-	>>>dir(a)
+	>>> def a():
+	... 	pass
+	>>> dir(a)
 	['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
 	>>>
 

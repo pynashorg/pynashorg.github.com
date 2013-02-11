@@ -4,7 +4,6 @@ title: Weekend Hacks
 author: Whit Morris
 comments: true
 ---
-# Weekend Hacks
 
 ## Who & What
 

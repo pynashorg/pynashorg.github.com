@@ -74,18 +74,16 @@ so in the interest of being classy, so will we.
 This is how I roll when I want to get started (presuming I think it
 will be more than a gist of code).  After creating a github repo::
 
-```bash
-$ cd /to/the/folder/where/the-magic-happens
-$ mkvirtualenv sc2s3
-(sc2s3)$ pip install pastescript
-(sc2s3)$ paster create sc2s3
-... answer a bunch of questions about my package
-(sc2s3)$ cd ./sc2s3 && wget -O .gitignore http://bit.ly/Z1Tn2e \
-             && git init \ 
-             && git remote add origin git@github.com:whitmo/sc2s3.git
-(sc2s3)$ git add ./ && git commit -m 'gitty up' && git push -u origin master
-(sc2s3)$ pip install -e ./
-```
+    $ cd /to/the/folder/where/the-magic-happens
+    $ mkvirtualenv sc2s3
+    (sc2s3)$ pip install pastescript
+    (sc2s3)$ paster create sc2s3
+    ... answer a bunch of questions about my package
+    (sc2s3)$ cd ./sc2s3 && wget -O .gitignore http://bit.ly/Z1Tn2e \
+                 && git init \ 
+                 && git remote add origin git@github.com:whitmo/sc2s3.git
+    (sc2s3)$ git add ./ && git commit -m 'gitty up' && git push -u origin master
+    (sc2s3)$ pip install -e ./
 
 The last step puts your new package onto the python path so you can start
 executing it.
@@ -110,53 +108,45 @@ be easiest.  I have a good hammer for this, the
 
 Let's grab it::
 
-```bash
-(sc2s3)$ pip install requests
-```
+
+    (sc2s3)$ pip install requests
+
 
 Now, lets get prompt.  The python REPL (and it's mutant children like
 ipython notebook) rule.  Let's load up our 
 
-```bash
-(sc2s3)$ python
->>> import requests
->>> import sc2s3
->>> help(requests)
-... # whole lotta on nice documentation
->>> help(sc2s3)
-... # whole lotta nada
-```
+
+    (sc2s3)$ python
+    >>> import requests
+    >>> import sc2s3
+    >>> help(requests)
+    ... # whole lotta on nice documentation
+    >>> help(sc2s3)
+    ... # whole lotta nada
+
 
 Now we can start to play
 
-```python
->>> clid = 'reallysupersecret123'
->>> res = requests.get('http://api.soundcloud.com/users/whitmo/tracks.json?client_id=%s' %client_id) 
->>> res.status_code
-200
->>> res.json()
-[{...lots of data...}]
-```
+    >>> clid = 'reallysupersecret123'
+    >>> res = requests.get('http://api.soundcloud.com/users/whitmo/tracks.json?client_id=%s' %client_id) 
+    >>> res.status_code
+    200
+    >>> res.json()
+    [{...lots of data...}]
 
 Using a simple list comprehension I can extract the urls::
 
-```python
->>> data = res.json()
->>> urls = [x['download_url'] for x in res.json() if 'downloadable' in x] 
-```
+    >>> data = res.json()
+    >>> urls = [x['download_url'] for x in res.json() if 'downloadable' in x] 
 
 So that works.  I've stuck this into a [function in sc2s3](https://github.com/whitmo/sc2s3/blob/master/sc2s3/cli.py#L11). Now I can import this function and tweak it if I like:
 
-```python
->>> from sc2s3 import cli
->>> data, response = cli.trackdata('whit', clid)
-```
+    >>> from sc2s3 import cli
+    >>> data, response = cli.trackdata('whit', clid)
 I want to change this function and test it, I can use the `reload` function::
 
-```python
->>> reload(cli)
->>> data, response = cli.trackdata('whit', clid)
-```
+    >>> reload(cli)
+    >>> data, response = cli.trackdata('whit', clid)
 
 This is a quick and easy way to iterate and test your code at the early design stage.  
 

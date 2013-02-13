@@ -113,3 +113,17 @@ If it's working, the server's output should look like this:
 If it's not working, leave a comment and we'll get it straightened out straight away.
 
 So, there you go. MessagePack streaming. Maybe next Wednesday I'll talk about [Pandas](http://pandas.pydata.org/).
+
+Related Packages
+---
+
+Other MessagePack related `pip` installable packages.
+
+* msgpack-rpc-python        - MessagePack RPC
+* wzmsgpackrpc              - MessagePack-RPC implementation using Whizzer
+* msgpack-pure              - MessagePack (de)serializer written in pure Python.
+* tastypie-msgpack          - MsgPack support for Django Tastypie.
+* django msgpack serializer - A MsgPack serializer for Django.
+* djangorestframework-msgpack - MessagePack support for Django REST framework
+* msgpack_numpy             - Numpy data serialization using msgpack
+

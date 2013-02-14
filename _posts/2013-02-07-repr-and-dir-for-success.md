@@ -33,17 +33,17 @@ Here's an example:
 	... 		return "Hello(name=%r)" % self.name
 	>>> a = Hello("Ryan")
 	>>> a.speak()
-	"Hi, 'Ryan'"
+	Hi, 'Ryan'
 	>>> repr(a)
 	"Hello(name='Ryan')"
 	>>> b = eval(repr(a))
 	>>> b.speak()
-	"Hi, 'Ryan'"
+	Hi, 'Ryan'
 	>>> b.name = 'Bob'
 	>>> b.speak()
-	"Hi, 'Bob'"
+	Hi, 'Bob'
 	>>> a.speak()
-	"Hi, 'Ryan'"
+	Hi, 'Ryan'
 	>>>
 
 As you can see our representation allowed eval to return a perfect copy assigned to _b_ of our _a_ object. It's a brand new object created in memory, not a reference to the original _a_ object. We even reassigned one of its attributes!

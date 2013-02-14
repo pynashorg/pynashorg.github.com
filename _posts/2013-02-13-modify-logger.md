@@ -7,7 +7,7 @@ comments: true
 
 ##Modify Logger Output
 
-Recently I've run into the need to remove some information from all log output in a system at work, and a custom Handler or a Filter just wouldn't do.
+I'm a fan of the internal [Python logging module](http://docs.python.org/2.7/library/logging.html) and recently I've run into the need to remove some information from all log output in a system at work, and a custom Handler or a Filter just wouldn't do.
 
 Fortunately it's rather easy to modify the behavior of logging.Logger.
 

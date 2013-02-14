@@ -25,6 +25,6 @@ Fortunately it's rather easy to modify the behavior of logging.Logger.
 	Halp adding stuff
 	>>>
 
-Notice we subclass from logging.getLoggerClass() as this will return the most recently modified instance of Logger -- otherwise the base Logger class; that's important if you want to allow other libraries or the framework, you may be using, to also modify it's behavior.
+Notice we subclass from logging.getLoggerClass() as this will return the most recently modified instance of Logger -- otherwise the base Logger class; that's important if you want to allow other libraries or the framework you may be using, to also modify it's behavior.
 
 I'll let this be a teaser. Next post will be a tutorial type post on the logging module in Python -- to warm you up a bit to the concept, posts afterwards will hack up logging in ever useful ways.

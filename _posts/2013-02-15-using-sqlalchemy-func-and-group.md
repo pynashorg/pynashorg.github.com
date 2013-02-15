@@ -105,7 +105,7 @@ results below.
     [(u'Diner', 1, 100.5), (u'Mob', 2, 1100500.0), (u'Personal', 1, 125.5)]
     
 And of course, we can also save them to a results list and print them out nicer.  Notice how 
-we can use the lable names we access earlier to access that data.
+we can use the label names we access earlier to access that data.
 
     >>> results = db.query(User.group,
     ...     label('members', func.count(User.id)),

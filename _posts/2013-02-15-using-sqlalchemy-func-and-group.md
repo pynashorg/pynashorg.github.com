@@ -5,7 +5,6 @@ author: Jason Myers
 comments: true
 ---
 
-##Introduction to Func and Group with SQLAlchemy
 
 [SQLAchemy](http://www.sqlalchemy.org/) is a powerful ORM for python, and is 
 quite common in the Flask and Pyramid communities.  It is installable via a simple:

@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Quick Hit: Virtualenvwrapper Auto Directory Tips
+title: Quick Hit&#58; Virtualenvwrapper Auto Directory Tips
 author: Jason Myers
 comments: true
 ---
 
-##Quick Hit: Virtualenvwrapper Auto Directory Tips
 
 I use [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest) to manage my virtual environments, 
 and I store everything in a projects folder in my home directory.  Thanks to a tip on the virtualenvwrapper site, 

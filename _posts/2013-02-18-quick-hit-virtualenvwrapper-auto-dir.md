@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quick Hit: Virtualenvwrapper Auto Directory Tips
+title: Quick Hit - Virtualenvwrapper Auto Directory Tips
 author: Jason Myers
 comments: true
 ---

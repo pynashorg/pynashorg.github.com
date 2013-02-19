@@ -137,6 +137,11 @@ That part is not very interesting, so we&rsquo;ll skip it.
 
 You now have all the information. **What is this code doing?**
 
+<figure>
+  <img src="/images/blog-content/monty-foot.jpg">
+  <figcaption>Hint: It&rsquo;s rather silly.</figcaption>
+</figure>
+
 If you want to puzzle over this some more,
 [view the whole script without comments.](https://gist.github.com/jorendorff/4987554)
 

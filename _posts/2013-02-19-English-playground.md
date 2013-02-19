@@ -8,6 +8,11 @@ comments: true
 Terry Gilliam tells a story about seeing Agnolo Bronzino&rsquo;s
 painting
 [*Venus, Cupid, Folly and Time*](https://en.wikipedia.org/wiki/Venus,_Cupid,_Folly,_and_Time).
+
+<figure>
+  <img src="/images/blog-content/venus-cupid.jpg">
+</figure>
+
 It&rsquo;s considered a Mannerist masterpiece, packed with allegorical
 details from the erotic to the obscure, but none of that mattered to
 Gilliam. The entire intellectual experience he was supposed to be having
@@ -140,4 +145,4 @@ I find the effect deliciously eerie.
 
 [View the whole script, with brief comments.](https://gist.github.com/jorendorff/4987754)
 
-Next week, I&rsqou;ll take a look inside the `difflib` module. See you then.
+Next week, I&rsquo;ll take a look inside the `difflib` module. See you then.

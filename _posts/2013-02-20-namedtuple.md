@@ -32,8 +32,8 @@ Awesome! It's a tuple ... with names!
 
     >>> for character in characters:
     >>>     print(character.name)
-    Ford Prefect
     Arthur Dent
+    Ford Prefect
     Marvin
 
 Pros and Cons
@@ -58,7 +58,7 @@ So, if you need to create millions of tuples, you should probably just use `tupl
 Where the magic happens
 ---
 
-One of the coolest features of `namedtuple` is the `verbose` argument, which defaults to `False`. Flip that to True and see what happens:
+One of the coolest features of `namedtuple` is the `verbose` argument, which defaults to `False`. Flip that to `True` and see what happens:
 
     >>> namedtuple('Character', 'name home', verbose=True)
     class Character(tuple):
@@ -120,4 +120,4 @@ Wait ... default ... dict methods???
 
     >>> from collections import defaultdict
 
-So, go try out `namedtuple` and learn more about [`defaultdict`](http://docs.python.org/2/library/collections.html#collections.defaultdict). Two really simple and *incredibly* useful tools in the standard library.
+So, go try out `namedtuple` and learn more about [`defaultdict`](http://docs.python.org/2/library/collections.html#collections.defaultdict); two really simple and *incredibly* useful tools in the standard library.

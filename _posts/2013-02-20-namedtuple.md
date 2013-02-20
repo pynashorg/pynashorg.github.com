@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Decorating Functions
+title: Named Tuple
 author: Scot Clausing
 comments: true
 ---

@@ -32,9 +32,9 @@ essays, and news articles. This made a corpus of about a million
 words. They put all the words on punchcards, so that computer programs
 could be run on them. This data set became the Brown Corpus.
 
-There are larger data sets out there now, but the Brown Corpus is that
-it&rsquo;s small enough to hack on interactively and freely available on
-the Internet. After installing NLTK, it&rsquo;s as simple as this:
+There are larger data sets out there now, but the Brown Corpus is small
+enough to hack on interactively and freely available on the Internet.
+After installing NLTK, it&rsquo;s as simple as this:
 
     >>> from nltk.corpus import brown
     >>> len(brown.words())

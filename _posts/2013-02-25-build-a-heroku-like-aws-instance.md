@@ -1,3 +1,10 @@
+---
+layout: post
+title: Quick Hit&#58; Build a Heroku Like AWS Instance
+author: Jason Myers
+comments: true
+---
+
 One of my favorite things about heroku is their simplicity to get up and running on a new app. 
 I've recently been trying to replicate parts of their setup that I really like on my AWS servers. 
 So I wanted to share where I'm at so far, and to start off we need a blank EC2 ubuntu instance.  In 
@@ -6,11 +13,8 @@ like. As this example is using nginx and gunicorn to serve a flask application, 
 make changes to serve pyramid or django applications. (Not many though)
 
 To start off let's get our new host added to our ssh config file. I'm on a Mac but in any 
-*nix OS, your ssh config is in ~/.ssh/config.  Open that file in your favorite editor. (VIM)
-
+*nix OS, your ssh config is in ~/.ssh/config.  Open that file in your favorite editor. (``vim ~/.ssh/config``)
 ```
-vim ~/.ssh/config
-
 Host hostname
   User ubuntu
   HostName ec2-XX-XXX-XX-XXX.compute-1.amazonaws.com

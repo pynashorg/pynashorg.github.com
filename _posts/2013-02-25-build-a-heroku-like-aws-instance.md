@@ -158,6 +158,7 @@ Next let's setup an app config for gunicorn.  This will bind gunicorn to the pro
 It also sets up logs in the /opt/appname directory.  It creates workers based on the number of processors, 
 and is great for autoscaling on Amazon instances.  We also set the timeout to 5 minutes.  This file goes in 
 ```/opt/sucratrend/gunicorn.conf```.
+
 ```
 import multiprocessing
 

@@ -151,13 +151,13 @@ Lastly, we need to define a location for server based error pages.
 The complete nginx conf file as a gist is available [here](https://gist.github.com/jasonamyers/5024959). We need 
 to turn off the default site, and enable the one for our app.
 ```
-sudo ln -s /etc/nginx/sites-available/sucratrend /etc/nginx/sites-enabled/sucratrend
+sudo ln -s /etc/nginx/sites-available/appname /etc/nginx/sites-enabled/appname
 ```
 
 Next let's setup an app config for gunicorn.  This will bind gunicorn to the proper interface and port. 
 It also sets up logs in the /opt/appname directory.  It creates workers based on the number of processors, 
 and is great for autoscaling on Amazon instances.  We also set the timeout to 5 minutes.  This file goes in 
-```/opt/sucratrend/gunicorn.conf```
+/opt/sucratrend/gunicorn.conf.
 ```
 import multiprocessing
 

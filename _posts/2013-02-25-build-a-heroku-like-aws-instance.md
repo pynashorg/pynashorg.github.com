@@ -261,6 +261,5 @@ any required environment variables such as Database connection strings in the /e
 
 
 Django Resources
-[Django Gunicorn and Nginx Setup](http://ijcdigital.com/blog/django-gunicorn-and-nginx-setup/)
-
-[Graphite on Ubuntu 12.04 LTS – Part II: gunicorn, nginx and supervisord](http://www.kinvey.com/blog/108/graphite-on-ubuntu-1204-lts-8211-part-ii-gunicorn-nginx-and-supervisord)
+- [Django Gunicorn and Nginx Setup](http://ijcdigital.com/blog/django-gunicorn-and-nginx-setup/)
+- [Graphite on Ubuntu 12.04 LTS – Part II: gunicorn, nginx and supervisord](http://www.kinvey.com/blog/108/graphite-on-ubuntu-1204-lts-8211-part-ii-gunicorn-nginx-and-supervisord)

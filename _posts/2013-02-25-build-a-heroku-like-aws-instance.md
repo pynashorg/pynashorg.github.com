@@ -71,10 +71,10 @@ git init --bare
 mkdir /opt/appname
 ```
 
-Next, we're gonna setup a git post-recieve hook.  This will copy every push to the git repo 
+Next, we're gonna setup a git post-receive hook.  This will copy every push to the git repo 
 over to our /opt/appname directory.
 ```
-vim hooks/post-recieve
+vim hooks/post-receive
 ```
 Put in the following:
 ```

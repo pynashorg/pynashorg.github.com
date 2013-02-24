@@ -21,6 +21,7 @@ Now we can connect to the instance with a simple name and not worry about keys. 
 ssh hostname
 ```
 
+##Base OS and Environment Setup
 On first things first let's get all our packages up to date on the instance. So start an SSH 
 session as shown in the command above, then type:
 ```
@@ -59,6 +60,7 @@ vim /opt/ssl/domainname.com.chained.crt
 vim /opt/ssl/domainname.com.key
 ```
 
+##Setup Git Hosting
 Now let's setup a git repo to recieve our application.  This setups a bare git repo that we can 
 push data into.  This is what enables us to deploy our application via git. The directory 
 created last is where our app is going to be copied to for the active running copy.
@@ -84,6 +86,7 @@ Now make it executable:
 chmod +x hooks/post-receive
 ```
 
+##Setup Nginx
 Now we need to build an nginx configuration file for our applications. ```sudo vim /etc/nginx/sites-available/appname ```
 I'm gonna step through this file a bit at a time to explain it.  First we're going to setup the reference to 
 our gunicorn server.  We're going to be running it on localhost port 5000.
@@ -154,10 +157,11 @@ to turn off the default site, and enable the one for our app.
 sudo ln -s /etc/nginx/sites-available/appname /etc/nginx/sites-enabled/appname
 ```
 
+##Setup Gunicorn
 Next let's setup an app config for gunicorn.  This will bind gunicorn to the proper interface and port. 
 It also sets up logs in the /opt/appname directory.  It creates workers based on the number of processors, 
 and is great for autoscaling on Amazon instances.  We also set the timeout to 5 minutes.  This file goes in 
-``/opt/sucratrend/gunicorn.conf``.
+``/opt/appname/gunicorn.conf.py``.
 
 ```
 import multiprocessing
@@ -169,6 +173,7 @@ workers = multiprocessing.cpu_count() * 2 + 1
 timeout = 300
 ```
 
+##Setup Supervisord
 Now we need to switch to the root user and setup supervisord. I've setup a [gist](https://gist.github.com/jasonamyers/5024988) 
 with a common supervisord init script. This was lifted from a stackoverflow [post](http://serverfault.com/questions/96499/how-to-automatically-start-supervisord-on-linux-ubuntu). 
 We need to make the script executable and then update the system rc.d process to utilize the scripts. 
@@ -240,26 +245,38 @@ autorestart=true
 redirect_stderr=true
 ```
 
+##Push to Git
 Now back on our desktop let's push our app via git to the server:
 ```
 git remote add prod ubuntu@hostname:appname.git
 git push prod master
 ```
 
-You should now see files under /opt/appname relating to your application. Now lets install all the 
-requirements.  Some people like to add this to the watchmedo directive in ``/etc/supervisord.conf``.
+You should now see files under /opt/appname relating to your application on the EC2 instance. Now lets install 
+all the requirements.  Some people like to add this to the watchmedo directive in ``/etc/supervisord.conf``.
 ```
 sudo pip install -r /opt/appname/requirements.txt
 ```
 
-If you have any background processes that run as part of the application, you'll want to make sure you put
-any required environment variables such as Database connection strings in the /etc/environment file.
+Perform any application setup you need.  For example, create the database or if you have any background processes that run as part of the application, you'll want to make sure you put
+any required environment variables such as database connection strings in the /etc/environment file. 
+
+Restart the server with the follow:
+```
+sudo shutdown -r now
+```
+
+Now check that supervisord started our processes correctly.
+```
+sudo supervisorctl status
+```
+
+We can also check both the gunicorn and supervisord logs in /tmp
+
+Let me know what problems you run into!
 
 
 
-
-
-
-Django Resources
+Additional Django Resources
 - [Django Gunicorn and Nginx Setup](http://ijcdigital.com/blog/django-gunicorn-and-nginx-setup/)
 - [Graphite on Ubuntu 12.04 LTS – Part II: gunicorn, nginx and supervisord](http://www.kinvey.com/blog/108/graphite-on-ubuntu-1204-lts-8211-part-ii-gunicorn-nginx-and-supervisord)

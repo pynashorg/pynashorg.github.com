@@ -157,7 +157,7 @@ sudo ln -s /etc/nginx/sites-available/appname /etc/nginx/sites-enabled/appname
 Next let's setup an app config for gunicorn.  This will bind gunicorn to the proper interface and port. 
 It also sets up logs in the /opt/appname directory.  It creates workers based on the number of processors, 
 and is great for autoscaling on Amazon instances.  We also set the timeout to 5 minutes.  This file goes in 
-```/opt/sucratrend/gunicorn.conf```.
+``/opt/sucratrend/gunicorn.conf``.
 
 ```
 import multiprocessing
@@ -247,7 +247,7 @@ git push prod master
 ```
 
 You should now see files under /opt/appname relating to your application. Now lets install all the 
-requirements.  Some people like to add this to the watchmedo directive in ```/etc/supervisord.conf```.
+requirements.  Some people like to add this to the watchmedo directive in ``/etc/supervisord.conf``.
 ```
 sudo pip install -r /opt/appname/requirements.txt
 ```
@@ -262,4 +262,5 @@ any required environment variables such as Database connection strings in the /e
 
 Django Resources
 [Django Gunicorn and Nginx Setup](http://ijcdigital.com/blog/django-gunicorn-and-nginx-setup/)
+
 [Graphite on Ubuntu 12.04 LTS – Part II: gunicorn, nginx and supervisord](http://www.kinvey.com/blog/108/graphite-on-ubuntu-1204-lts-8211-part-ii-gunicorn-nginx-and-supervisord)

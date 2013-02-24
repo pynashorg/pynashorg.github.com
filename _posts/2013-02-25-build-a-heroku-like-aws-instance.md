@@ -157,7 +157,7 @@ sudo ln -s /etc/nginx/sites-available/appname /etc/nginx/sites-enabled/appname
 Next let's setup an app config for gunicorn.  This will bind gunicorn to the proper interface and port. 
 It also sets up logs in the /opt/appname directory.  It creates workers based on the number of processors, 
 and is great for autoscaling on Amazon instances.  We also set the timeout to 5 minutes.  This file goes in 
-/opt/sucratrend/gunicorn.conf.
+```/opt/sucratrend/gunicorn.conf```.
 ```
 import multiprocessing
 
@@ -245,8 +245,8 @@ git remote add prod ubuntu@hostname:appname.git
 git push prod master
 ```
 
-You should now see files under /opt/sucratrend relating to your application. Now lets install all the 
-requirements.
+You should now see files under /opt/appname relating to your application. Now lets install all the 
+requirements.  Some people like to add this to the watchmedo directive in ```/etc/supervisord.conf```.
 ```
 sudo pip install -r /opt/appname/requirements.txt
 ```

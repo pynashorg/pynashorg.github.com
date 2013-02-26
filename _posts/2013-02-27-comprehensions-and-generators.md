@@ -160,8 +160,8 @@ Knowing that, let's work on our `fib()` generator a bit ...
     >>> def fib(n):
     ...     """ Generate the first `n` fibonacci numbers """
     ...     a, b = 0, 1
-    ...     while n > 0:
-    ...         a, b, n = b, a + b, n - 1
+    ...     for n in xrange(n):
+    ...         a, b = b, a + b
     ...         yield a
 
     >>> tuple(fib(20))

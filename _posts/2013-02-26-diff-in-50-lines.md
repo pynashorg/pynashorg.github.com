@@ -53,7 +53,7 @@ Knowing that, we can break the problem into three parts:
 3. Code for printing out a diff, given the list of common regions.
 
 All three parts are apparent in the final code:
-[Three problems, three functions.](https://gist.github.com/jorendorff/5040491).
+[Three problems, three functions.](https://gist.github.com/jorendorff/5040491)
 
 The last two are, I hope, easy enough that you can read them,
 ponder them, and discover waht they do and how they work.

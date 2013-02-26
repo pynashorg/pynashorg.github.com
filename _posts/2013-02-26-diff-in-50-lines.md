@@ -113,14 +113,19 @@ and as we go, we store the longest match in `sa, sb, n`.
 The only remaining question is how to construct every matching region.
 Here is how the Hunt&ndash;McIlroy algorithm does it:
 
-1. Start at the first line of file A.
-2. Make a list of active runs, initially empty.
-3. For each place *b* where the current line of file A appears in file B:
-    a. if it extends an active run, that run stays active and its length increases by 1.
-    b. otherwise, make a new active run of length 1.
-4. Discard all previously-active runs that did not get extended in step
-   (They are not active anymore; we reached a line that doesn't match.)
-5. Move on to the next line of file A, if any, and go to step 3.
+<ol>
+  <li>Start at the first line of file A.</li>
+  <li>Make a list of active runs, initially empty.</li>
+  <li>For each place *b* where the current line of file A appears in file B:
+    <ul>
+      <li>If it extends an active run, that run stays active and its length increases by 1;</li>
+      <li>Otherwise, make a new active run of length 1.</li>
+    </ul></li>
+  <li>Discard all previously-active runs that did not get extended in step 3
+    (They are not active anymore; we reached a line that doesn't match.)</li>
+  <li>If there are any more lines in file A,
+    move on to the next one and go back to step 3.</li>
+</ol>
 
 Note that the code works
 for any two lists of hashable objects,

@@ -191,13 +191,14 @@ Scopes
 ---
 
 Comprehensions run in the local scope. This means that the name(s) you create in the comprehension must not collide
-with a name in your local scope or your the value bound to your local name will be overwritten. Read: [You should use
-map and filter instead of list comprehensions.](http://stackoverflow.com/a/13483314)
+with a name in your local scope or your the value bound to your local name will be overwritten.
 
     >>> char = 'x'
     >>> chars = [char for char in 'hello']
     >>> char
     'o'
+
+This issue has been addressed in Python 3. Link below.
 
 Since comprehensions run in the local scope, you may be tempted to use them as a shorthand for a loop. Don't do this.
 It's confusing and annoying. Use list comprehensions to make lists.
@@ -237,7 +238,8 @@ Python 3
 Iterators are favored in Python 3, so it's good to get used to them now. Functions like `range`, `map`, and `zip` will
 return iterators instead of requiring the use of `xrange` and `itertools` `.imap` and `.izip`.
 
-Also in Python 3: [`yield from` generator delegation](http://docs.python.org/3.3/whatsnew/3.3.html#pep-380) is awesome.
+* Generator Delegation: [`yield from`](http://docs.python.org/3.3/whatsnew/3.3.html#pep-380) is awesome.
+* Scope issue fixed: ['... the comprehension is executed in a separate scope, so names assigned to in the target list don’t “leak”'](http://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries)
 
 That's it
 ===

@@ -62,7 +62,7 @@ So, what was `enumerate('hello')` all about?
 
 Run `help(enumerate)` and read the description. Here's the important part: "The enumerate object yields pairs ..." When
 we're talking about yielding values, we're talking about generators ... (Well, I mean, here we're actually talking about
-iterators, but we're getting to generators - I promise!
+iterators, but we're getting to generators - I promise!)
 
     >>> import inspect
     >>> inspect.isgenerator(enumerate(''))
@@ -244,7 +244,7 @@ return iterators instead of requiring the use of `xrange` and `itertools` `.imap
 That's it
 ===
 
-Hopefull that was a valuable, quick intro to Comprehensions and Generators. If you're interested in a deeper knowledge
+Hopefully that was a valuable, quick intro to Comprehensions and Generators. If you're interested in a deeper knowledge
 about the inner workings of iterators and generators, I'd recommend starting here:
 
 * [Iterators](http://docs.python.org/2/tutorial/classes.html#iterators)

@@ -95,4 +95,4 @@ Here is our result.
     DEF 645.84
 
 
-A full gist of the code is available [here](https://gist.github.com/jasonamyers/5064720)
+A full gist of the code is available [here](https://gist.github.com/jasonamyers/5064720).

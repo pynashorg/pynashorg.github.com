@@ -84,14 +84,14 @@ We can iterate though them and display useful data by doing.
     Lil Bob 100500.0
     Rachael 125.5
 
-But what is we wanted a total of the balance by Group the user is in?  To do that we
+But what if we wanted a total of the balance by Group the user is in?  To do that we
 need some more pieces from SQLAlchemy.  Namely, we want to get a func class that will
 give us access to math based functions and label to let us label the returned data.
 
     >>> from sqlalchemy import func
     >>> from sqlalchemy.sql import label
 
-Okay, now we can out this all together to get a list of groups, how many people are 
+Okay, now we can put this all together to get a list of groups, how many people are 
 in the group, and what the groups aggregated balance is.
 
     >>> db.query(User.group,
@@ -118,4 +118,4 @@ we can use the label names we access earlier to access that data.
     Mob has 2 members with a balance of 1100500
     Personal has 1 members with a balance of 125
 
-The full code from the example is available at this [Gist](https://gist.github.com/jasonamyers/4960262)
+The full code from the example is available at this [Gist](https://gist.github.com/jasonamyers/4960262).

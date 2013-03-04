@@ -56,7 +56,7 @@ All three parts are apparent in the final code:
 [Three problems, three functions.](https://gist.github.com/jorendorff/5040491)
 
 The last two are, I hope, easy enough that you can read them,
-ponder them, and discover waht they do and how they work.
+ponder them, and discover what they do and how they work.
 Both have some clever surprising bits,
 so if you enjoy a good puzzle,
 read the code!

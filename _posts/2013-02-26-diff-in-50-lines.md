@@ -127,8 +127,7 @@ Here is how the Hunt&ndash;McIlroy algorithm does it:
     move on to the next one and go back to step 3.</li>
 </ol>
 
-Note that the code works
-for any two lists of hashable objects,
+Note that the code works for lists of arbitrary objects,
 not just strings.
 
 

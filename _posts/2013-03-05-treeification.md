@@ -134,55 +134,54 @@ you care to provide; it doesn't have to be based on geographic distances.
     def treeify(vertices, distanceFn):
         """ Return a list of triples (distance, v1, v2), the edges of a minimum spanning tree. """
 
+        # This function implements Prim's algorithm:
+        # https://en.wikipedia.org/wiki/Prim%27s_algorithm
         # We're going to build a tree. It is initially empty.
         tree_edges = []
 
-        # We'll use two sets. `outside` holds all vertices we cannot reach yet,
-        # which initially is all of them.
-        outside = set(vertices)
+        # `unreached` is the set of all vertices our tree hasn't reached yet, which
+        # initially is all of them.
+        unreached = set(vertices)
 
-        # `inside` holds all vertices we can reach, and we'll begin by putting one
-        # vertex in there. It doesn't matter which one. This is the seed from which
-        # our tree will grow.
-        seed = outside.pop()
-        inside = {seed}
+        # We'll begin by picking one vertex--it doesn't matter which one--and
+        # putting it in our tree. This is the seed from which our tree will grow.
+        seed = unreached.pop()
 
         # We use `edges` to select which edge to add next. Since the algorithm has
         # us repeatedly choosing the cheapest edge, we'll use a heap. Initially it
         # contains all edges leading out from `seed`.
         edges = []
-        for v in outside:
+        for v in unreached:
             heapq.heappush(edges, (distanceFn(seed, v), seed, v))
 
-        # When no vertices are left outside the tree, we'll be done.
-        while outside:
-            # Choose the cheapest edge leading from an `inside` vertex that we
-            # haven't already considered.
+        # When no vertices are left unreached, we'll be done.
+        while unreached:
+            # Choose the cheapest edge remaining in `edges`.
             new_edge = d, x, y = heapq.heappop(edges)
 
-            # Now this edge might actually connect two inside vertices, in which
-            # case we'll just discard it and keep going. We know that `x` at least
-            # is inside, since we've only added edges leading from inside vertices.
-            assert x in inside
-            if y in outside:
-                # We have selected the cheapest edge, as required by the algorithm.
-                # Add it to the tree, move `y` from `outside` to `inside`, and add
-                # to `edges` all the edges leading from `y` to outside nodes.
+            # `new_edge` might connect two already-reachable vertices; in that
+            # case, skip it and try another. We know that `x` at least is in the
+            # tree, since we've only ever added edges leading from inside the tree.
+            assert x not in unreached
+            if y in unreached:
+                # Great, we have the cheapest edge that reaches a new vertex, as
+                # required.  Add `y` and `new_edge` to the tree, and add to `edges`
+                # all the edges leading from `y` to unreached vertices.
                 tree_edges.append(new_edge)
-                outside.remove(y)
-                inside.add(y)
-                for w in outside:
+                unreached.remove(y)
+                for w in unreached:
                     heapq.heappush(edges, (distanceFn(y, w), y, w))
 
         return tree_edges
 
-44 lines of code, thoroughly commented.
+42 lines of code, thoroughly commented.
 
 Using this function on the SEC data set is a piece of cake:
 
     import sec, pprint
     result = treeify(sec.names, sec.distance)
     pprint.pprint(result)
+    print "Total distance:", sum(row[0] for row in result)
 
 The resulting map:
 

@@ -232,3 +232,4 @@ Some additional reading and sources:
 * Run `%magicfunctionname?` for each magic function for specific help.
 * [Profiling Python Code](http://scikit-learn.org/dev/developers/performance.html#profiling-python-code)
 * [Chapter 3 of the Python Data Analysis book](http://www.amazon.com/Python-Data-Analysis-Wes-McKinney/dp/1449319793)
+* [Python MotW: Debugging and Profiling](http://pymotw.com/2/profilers.html)

@@ -2,7 +2,7 @@
 layout: post
 title: Expanding, Unpacking, or ... Splatting?
 author: Scot Clausing
-# comments: true
+comments: true
 ---
 
 [Whatever you call it](http://stackoverflow.com/questions/2322355/proper-name-for-python-operator), a few wonderfully

@@ -120,7 +120,7 @@ We're almost ready to normalize the downloads per version. We need a numerical v
     # compute downloads / day
     df['downloads / day'] = df['downloads'] / df['days elapsed']
 
-Finally, we have our normalized downloads per version per day metric that started this whole thing in the first place.
+Finally, we have our normalized downloads per version per day metric. Obviously, you could also do some average time per version, total number of downloads, etc. given this data. If you're really feeling adventurous, you might consider joining this table with commit information from Github and figure out on average how long it takes to add (or delete) a single line of code.
 
 ## Plotting and wrapping up
 
@@ -138,6 +138,6 @@ Finally, we have our normalized downloads per version per day metric that starte
     <img src="/images/blog-content/pycap-dl.png"
 </figure>
 
-I'll leave interpretation as an exercise to the reader. If you work with any type of data in python, I highly suggest `pandas`, I've only scratched the surface of what it can do here. Personally, I've been able to erase lots of ugly data import code and for that alone I'm thankful.
+I'll leave interpretation as an exercise to the reader. If you work with any type of data in python, I highly recommend taking a look at `pandas`, I've only scratched the surface of what it can do here. Personally, I've been able to erase lots of ugly data import code and for that alone I'm thankful.
 
 Like I mentioned above, this post was developed in an IPython notebook. It's posted as a gist [here](https://gist.github.com/sburns/5153499). You can view the rendered version [here](http://nbviewer.ipython.org/5153499).

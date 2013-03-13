@@ -6,31 +6,31 @@ comments: true
 title: Examining PyPI Package Statistics with lxml and pandas
 ---
 
-Hello, I'm [Scott Burns](http://sburns.github.com) and I thought I'd share a little hack  I put together the other day. I maintain a [package](https://pypi.python.org/pypi/PyCap/) on PyPI and was curious about download statistics per version. Since I don't put out new versions on any sort of a schedule, I needed to normalize the downloads per version per time between each version.
+Hello, I'm [Scott Burns](http://sburns.github.com) and I thought I'd share a little hack I put together the other day. I maintain a [package](https://pypi.python.org/pypi/PyCap/) on PyPI and was curious about download statistics per version. Since I don't put out new versions on any sort of a schedule, I needed to normalize the downloads per version per time between each version.
 
 Here's a quick gameplan:
 
-* As far as I know, there's no PyPI endpoint to grab all versions of a package, so we'll have to scrape a little bit.
+* As far as I know, there's no PyPI endpoint to grab uploaded version strings for a package, so we'll have to scrape a little bit.
 * PyPI does provide a nice JSON endpoint (`https://pypi.python.org/pypi/%(package)/%(version)/json`) that we can use to grab the upload time and download statistics per version, among other things.
 * Load up a `pandas.DataFrame` and do some quick datetime subtraction and normalization.
 * Plot.
 
 ## Getting started
 
-I developed this with the super useful [IPython notebook](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html). The guts of this post don't depend on it, but it simplifies plotting. Let's install ipython, some third-party stuff used here and boot up:
+I developed this with the super useful [IPython notebook](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html). The guts of this post don't depend on it, but it simplifies plotting at the end. Let's install ipython, some third-party stuff used here and boot up:
 
-	$ pip install ipython tornado pyzmq
+    $ pip install ipython tornado pyzmq
     $ pip install numpy
     $ pip install pandas lxml requests matplotlib cssselect dateutil
     $ ipython notebook
-    
+
 Assuming this goes to plan, a browser window will open where you can start a new notebook. Some initial imports:
 
-	from lxml.html import document_fromstring
-	import requests
-	import pandas as pd
-	from dateutil.parser import parse as dateparse
-	%pylab inline
+    from lxml.html import document_fromstring
+    import requests
+    import pandas as pd
+    from dateutil.parser import parse as dateparse
+    %pylab inline
 
 ## Scraping PyPI for Package Versions
 
@@ -51,16 +51,16 @@ I'm not aware of a public endpoint on PyPI for grabbing all uploaded versions of
         rows = html.cssselect('table.list tr')[:-1]
         header = rows[0]
         data = rows[1:]
-        version_index, _ = filter(lambda x: x[1].text_content().lower() == 'version', 
+        version_index, _ = filter(lambda x: x[1].text_content().lower() == 'version',
             enumerate(header))[0]
         versions = map(lambda x: x[version_index].text_content(), data)
         return versions
 
-There's nothing too complex going on here. We're using the venerable `requests` library to grab the page using our username and password for basic authentication. Given the page content, we parse it with `lxml` and then select the table rows (except the last row, it contains the `Remove` and `Update Releases` buttons that we don't care about). Then, the header row is filtered for which column contains the text `Version` so this scraping function won't break if the columns are re-ordered for whatever reason. Finally, we pull out the version string from each of the rows in the table and return the list.
+There's nothing too complex going on here. We're using the venerable `requests` library to grab the page using our username and password for basic authentication. Given the page content, we parse it with `lxml` and then select the table rows (except the last row which contains the `Remove` and `Update Releases` buttons that we don't care about). Then, the header row is filtered for which column contains the text `Version` so this scraping function won't break if the columns are re-ordered for whatever reason. Finally, we pull out the version string from each of the rows in the table and return the list.
 
-Since PyPI uses basic authentication, we need to provide our username and password to grab the page. If you use a `~/.pypirc` config file, this information is stored in the `[pypi]` section. This function makes it a little bit easier to grab it:
+Since PyPI uses basic authentication, we need to provide our username and password to grab the page. If you use a `~/.pypirc` config file, your credentials are stored in the `[pypi]` section. This function makes it a little bit easier to grab it:
 
-	def get_pypi_auth():
+    def get_pypi_auth():
         """
         Try to read ~/.pypirc and return the (username, password) tuple
         """
@@ -74,9 +74,9 @@ Since PyPI uses basic authentication, we need to provide our username and passwo
 
 ## Using the Official PyPI JSON Feed
 
-Fortunately, PyPI provides a proper JSON feed for a package's statistics, so that's the end of our scraping.
+Fortunately, PyPI provides a proper JSON feed for a package's statistics, so that's the end of our scraping. Here's a function to grab the package metadata and download information:
 
-	def package_data(package, version):
+    def package_data(package, version):
         """
         Hit the official json feed for a package and version
         """
@@ -96,19 +96,19 @@ First, let's declare the package we're interested in and grab the versions and p
     package = 'PyCap'
     versions = package_versions(package, get_pypi_auth())
     data = [package_data(package, v)[1] for v in versions]
-    
-I only care about the `url_info` and am throwing away the package metadata in the list comprehension. Given the data, we can make a `pandas.DataFrame` and start to play around.
+
+In this example, we only care about the `url_info` and am throwing away the package metadata in the list comprehension. Given the data, we can make a `pandas.DataFrame` and start to play around with the `downloads` and `upload_date` columns.
 
     df = pd.DataFrame(data, index=versions)
     # convert upload_time
     df['upload_time'] = df['upload_time'].map(dateparse)
     df['elapsed'] = df['upload_time'] - df['upload_time'].shift(-1)
 
-The PyPI feed is giving is proper [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) formatted date strings, so the `dateutil.parser.parse` function has no problem converting to proper `datetime` objects. The `df['upload_time'].shift(-1)` is a temporary column that as it's name suggests is shifted, in our case **up** one row. This new `elapsed` column is therefore a series of `timedelta` objects representing the time between each version of this package.
+The PyPI feed is giving is proper [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) formatted date strings, so the `dateutil.parser.parse` function has no problem converting to proper `datetime` objects. The `df['upload_time'].shift(-1)` is a temporary column that as it's name suggests is shifted, in our case **up** one row. This new `elapsed` column is therefore a series of `timedelta` objects representing the time between when each version was uploaded to PyPI.
 
-We're finally (almost) ready to normalize the downloads per version. We need a numerical value for the amount of days in these `timedelta` objects. However, our shift & subtract above made the last row in the `elapsed` column a `Nan` since `pandas` dutifully propagates `Nan` values. Therefore, simply mapping the simple `lambda x: x.days` attribute getter to `df['elapsed']` will throw a `ValueError`, so we have to provide a slightly smarter getter function:
+We're almost ready to normalize the downloads per version. We need a numerical value for the amount of days in these `timedelta` objects, which we can normally get with the read-only `.days` attribute. However, our shift & subtract above made the last row in the `elapsed` column a `NaN` since `pandas` dutifully propagates `NaN` values. Therefore, simply mapping the simple `lambda x: x.days` attribute getter to `df['elapsed']` will throw a `ValueError`, so we have to provide a slightly smarter getter function:
 
-	def to_days(x):
+    def to_days(x):
         days = -1
         try:
             days = x.days
@@ -116,15 +116,15 @@ We're finally (almost) ready to normalize the downloads per version. We need a n
             pass
         return days
 
-    df['elapsed'] = df['elapsed'].map(to_days)
-	# compute downloads / day
-	df['downloads / day'] = df['downloads'] / df['elapsed']
-    
-Finally, we have our normalized downloads per version per day metric that drove this whole exploration. 
+    df['days elapsed'] = df['elapsed'].map(to_days)
+    # compute downloads / day
+    df['downloads / day'] = df['downloads'] / df['days elapsed']
+
+Finally, we have our normalized downloads per version per day metric that started this whole thing in the first place.
 
 ## Plotting and wrapping up
 
-`pandas` provides nice hooks into `matplotlib` for easily plotting columns against the `DataFrame`'s index. We'll initialize a figure, plot (leaving out the first version as that value is meaningless) and lightly annotate.
+`pandas` provides nice hooks into `matplotlib` for easily plotting columns against the `DataFrame`'s index. We'll initialize a figure, plot (leaving out the data from the first version as that value is meaningless) and lightly annotate.
 
     to_plot = df['downloads / day'][:-1]
     mpl.rc('figure', figsize=(10, 8))
@@ -134,8 +134,10 @@ Finally, we have our normalized downloads per version per day metric that drove 
     plt.title('Downloads/day per version for %s' % package)
     plt.show()
 
-ADD IMAGE HERE
+<figure>
+    <img src="/images/blog-content/pycap-dl.png"
+</figure>
 
-I'll leave interpretation as an exercise to the reader.
+I'll leave interpretation as an exercise to the reader. If you work with any type of data in python, I highly suggest `pandas`, I've only scratched the surface of what it can do here. Personally, I've been able to erase lots of ugly data import code and for that alone I'm thankful.
 
-Like I mentioned above, this post was developed in an IPython notebook. It's posted as a gist [here](https://gist.github.com/sburns/5153499). You can view a rendered version [here](http://nbviewer.ipython.org/5153499).
+Like I mentioned above, this post was developed in an IPython notebook. It's posted as a gist [here](https://gist.github.com/sburns/5153499). You can view the rendered version [here](http://nbviewer.ipython.org/5153499).

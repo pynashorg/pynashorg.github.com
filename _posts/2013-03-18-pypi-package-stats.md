@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 author: Scott Burns
 comments: true
 title: Examining PyPI Package Statistics with lxml and pandas

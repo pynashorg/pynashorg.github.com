@@ -109,19 +109,22 @@ See how long it takes a script to run.
 %timeit
 ---
 
-See how long a script takes to run averaged over a bunch of runs.
+See how long a script takes to run averaged over multiple runs.
 
     In [8]: %timeit 10*1000000
     10000000 loops, best of 3: 38.2 ns per loop
 
-Notice that by default `%timeit` runs your code millions of times before returning. Timing long running scripts this way
-may leave you waiting forever. In this case, either use `%time` instead, or limit the number of loops with `-n 1000` for
-example which will limit `%timeit` to a thousand iterations, like this:
+`%timeit` will limit the number of runs depending on how long the script takes to execute. Keep in mind that the
+`timeit` module in the standard library *does not* do this by default, so timing long running scripts that way
+may leave you waiting forever.
+
+The number of runs may be set with with `-n 1000`, for example, which will limit `%timeit` to a thousand iterations,
+like this:
 
     In [9]: %timeit -n 1000 10*1000000
     1000 loops, best of 3: 67 ns per loop
 
-Also note that the run-time reported will vary more wildly when limited to fewer loops.
+Also note that the run-time reported will vary more when limited to fewer loops.
 
 %prun
 ---

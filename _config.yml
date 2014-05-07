@@ -12,4 +12,5 @@ description:
 source:      .
 destination: ./_site
 plugins:     ./_plugins
+markdown: kramdown
 

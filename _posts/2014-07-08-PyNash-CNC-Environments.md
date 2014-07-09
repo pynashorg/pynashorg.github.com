@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PyNash Coffee and Code: Environments
+title: PyNash Coffee and Code Environments
 author: Jason Myers
 comments: true
 ---

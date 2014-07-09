@@ -38,6 +38,15 @@ Nope you will demo part of something the facilitator already showed and add anyt
 
 No worries so do I. But it's a very useful skill much like coding, and this is a safe space.
 
+## Is coffee and code kid friendly?
+
+Yes!!!
+
+## What do I need to participate?
+
+* You need virtualbox installed from [here](https://www.virtualbox.org/wiki/Downloads).
+* You need vagrant install from [here](https://www.vagrantup.com/downloads)
+
 ## So what is this one about?
 
 This first C-n-C is about environments and how to set them up.  So we'll cover virtualenv, virtualenvwrapper, pip, pyenv, etc related to setting up python environments.  If you have questions bring them! If you have other packages not listed here that you like bring them!

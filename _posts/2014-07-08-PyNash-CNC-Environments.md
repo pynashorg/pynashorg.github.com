@@ -55,14 +55,14 @@ This first C-n-C is about environments and how to set them up.  So we'll cover v
 
 * Get the Vagrant virtual machine that we'll use to work on from [Github](https://github.com/pynashorg/pynash-cnc)
 
-``git clone git@github.com:pynashorg/pynash-cnc.git
+    git clone git@github.com:pynashorg/pynash-cnc.git
 
 * Next we need to download and start the vagrant box (this will take a while the first time because it has to download an ubuntu cloud image)
 
-``vagrant up
+    vagrant up
 
 * You're ready to go shutdown the vagrant box and cya Saturday morning!
 
-``vagrant halt
+    vagrant halt
 
 

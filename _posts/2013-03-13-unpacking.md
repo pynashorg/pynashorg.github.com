@@ -62,7 +62,7 @@ But don't forget that the number of names must equal the number of items being e
 
 * This restriction goes away in Python 3 with the awesome [PEP-3132: Extended Iterable Unpacking.](http://www.python.org/dev/peps/pep-3132/)
 
-Unpacklng with function arguments with `*args` and `**kwargs`
+Unpacking with function arguments with `*args` and `**kwargs`
 ---
 
 First, we'll need a function to play with and some values to unpack into it.

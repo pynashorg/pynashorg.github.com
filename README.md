@@ -29,7 +29,7 @@ If you&rsquo;re on Windows, these commands won&rsquo;t work for you.
     rvm gemset create pynashorg
     rvm use @pynashorg
     gem install jekyll
-    jekyll --server --auto
+    jekyll --server --auto ( more recent versions (2.5.3) are using: `$ jekyll serve --watch`)
 
 Ctrl-C to kill it.
 

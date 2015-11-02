@@ -1,0 +1,194 @@
+---
+layout: page
+title: Jobs
+description: Python Jobs in Nashville
+---
+
+### Python Jobs in Nashville
+
+To add a job, make a [Pull Request](https://github.com/pynashorg/pynashorg.github.com)
+or email [Jason](https://github.com/pynashorg/pynashorg.github.com). The job must be based
+in Nashville, and you must be employed within the organization. It will live for
+30 days unless you resubmit it.
+
+<div class="row-fluid">
+  <hr />
+  <dl>
+    <dt>Company</dt>
+    <dd>Eventbrite (Nashville or San Francisco)</dd>
+    <dt>Position</dt>
+    <dd>Senior Security Engineer</dd>
+    <dt>Type</dt>
+    <dd>Full-time</dd>
+    <dt>Technologies</dt>
+    <dd>Python, Apache, MySQL, AWS, Hadoop, syslog, mod_evasive, Splunk</dd>
+    <dt>Job Description</dt>
+    <dd>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+
+        <p>We are looking for a highly accomplished Senior Security Engineer with proven skills in security engineering and a deep understanding of Web Applications, Internet commerce, and social networks to join our team. This hands-on technical leader will take ownership of security initiatives, assess threats and vulnerabilities, analyze data and code, flesh out measurable objectives, design solutions, drive implementation, oversee testing and deployment, and ensure ongoing monitoring.</p>
+        <p>The Senior Security Engineer will drive the build out of our application security infrastructure, and develop application defense mechanisms that ensure safety of our users, their personal information, financial transactions, and access to services. Drawing on expert skills of web security, social networking threats, database vulnerabilities, networking exposures, and available tools and technologies, the Senior Security Engineer translates security requirements and concerns into highly effective protection mechanisms and ensures rapid deployment as a key hands-on contributor in their implementation. Projects will involve topics such as network attacks, phishing, authentication, logging and log analysis, IP and device reputation, and security rules and policies.</p>
+        <p>In this role, you will partner with Operations, IT, Engineering, QA, and Product Management. We’re looking for someone who can juggle conflicting priorities and reconcile the needs for security, ease-of-use and conversions.</p>
+
+        <p>Eventbrite loves Nashville and we want you to love us as well.  In addition to working with really cool technologies you can work with and learn from really smart people like <a href="http://bit.ly/pynash-simon" target="_blank">Simon Willson</a> the co-creator of the Django framework.  Its fun if you get stuck on a problem to ask the person that built it for help.  But wait... there's more :)  We offer <b>really great benefits</b> including:</p>
+        <ul>
+            <li>Stock Options - An equity stake in an already hot startup!</li>
+            <li>Daily catered lunches from <a target="_blank" href="http://sifted.co/">Sifted.co</a></li>
+            <li>Take the time you need vacation policy</li>
+            <li>Medical/Dental/Vision - And it starts right after you start with us… no waiting!!</li>
+            <li>Lots more!  Want more details come talk with us!</li>
+        </ul>
+        <p><a href="http://bit.ly/pynash-security-eng" target="_blank"><button type="button" class="btn btn-primary">Apply Here</button></a></p>
+        <p>For more information please connect with <a href="https://www.linkedin.com/in/bryanmayes" target="_blank">Bryan Mayes</a> or send an <a href="mailto:connect@eventbrite.com">email</a></p>
+
+
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+    </dd>
+    <dt>Posted</dt>
+    <dd>8/7/2015</dd>
+  </dl>
+
+
+  <dl>
+      <dt>Company</dt>
+      <dd>HCA Healthcare</dd>
+      <dt>Position</dt>
+      <dd>Senior Python/ Perl/ Splunk Security Engineer</dd>
+      <dt>Type</dt>
+      <dd>Full time</dd>
+      <dt>Job Description</dt>
+      <dd>
+      <p>We are primarily a Perl shop but have started the migration over to Python for both front and backend scripts and web apps.</p>
+<p>The Security Application Engineer is responsible for developing and maintaining HCA Governance, Risk Management, and Compliance (GRC) applications. The scope of this responsibility is solutions targeted for enterprise wide deployment.
+
+High-level duties also include creation and implementation of standards, guidance, and processes for GRC software solutions.
+
+This role supports solutions driven from complex legal requirements and business risks driven by the HIPAA Security and Privacy rules, the Sarbanes-Oxley Act, PCI DSS, HITECH, and also emerging cyber-attacks threatening the theft of sensitive and private health information.
+
+The Security Application Engineer will help drive the software solution strategy in GRC related to these areas in support of the CISO’s mission for information protection across HCA. The result of this work is crucial to HCA’s strategy for compliance with government regulations and also internal policies, standards and guidance to ensure the safeguard of HCA’s proprietary data, physical infrastructure and resources from internal and external threats.</p>
+
+<p>This position is full-time If you're interested, visit the official <a href="http://careersathca.com/careers/search.dot?jobId=10207-16023">job listing</a> or drop us a line at <a href="mailto:Chris.Gabel@HCAHealthcare.com <Chris.Gabel@HCAHealthcare.com">Chris Gabel</a> We can't wait to meet you.</p>
+      </dd>
+    <dt>Posted</dt>
+    <dd>8/4/2015</dd>
+  </dl>
+  <hr />
+  <dl>
+      <dt>Company</dt>
+      <dd>Eldarion, Inc</dd>
+      <dt>Position</dt>
+      <dd>Django / Javascript Developer</dd>
+      <dt>Type</dt>
+      <dd>Parttime and Fulltime Contract</dd>
+      <dt>Job Description</dt>
+      <dd>
+          Eldarion has a client that needs full-stack web developers that are self-starters
+          and comfortable working remotely.
+
+          If you'd like to know more details and/or are interested please contact
+          <a href="mailto:paltman@eldarion.com">Patrick Altman</a> ASAP.
+      </dd>
+    <dt>Updated</dt>
+    <dd>8/4/2015</dd>
+  </dl>
+  <hr />
+  <dl>
+    <dt>Company</dt>
+    <dd>Fledjling Software Inc</dd>
+    <dt>Position</dt>
+    <dd>Django Web Developer</dd>
+    <dt>Type</dt>
+    <dd>Contract</dd>
+    <dt>Technologies</dt>
+    <dd>Python, Django, Stripe</dd>
+    <dt>Job Description</dt>
+    <dd>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+        <p>Quite possibly one of the nerdiest contract gigs in Nashville.  I'm looking for professional help in completing my utility set for players of Magic The Gathering Online.  Most players, like me, hate the fact that MTGO is a money sink.  With every expansion, you are required to pony up for cards to keep yourself competitive.  My utility set helps players use their card-buying budget more efficiently - for a small, monthly subscription fee.  I've already written most of the business logic.  I need help wiring up my payment processor, completing the free trial workflow, and launching the site on AWS.</p>
+
+        <p>For more information please contact <a href="mailto:donrosszx@gmail.com">Don Ross</a> or view my <a href="http://www.linkedin.com/pub/don-ross/4/48a/243">LinkedIn Profile</a>.  I will also accept emails telling me what a dork I am for playing a silly card game in my 40s.  I know, I know.</p>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+    </dd>
+    <dt>Posted</dt>
+    <dd>2/4/2015</dd>
+  </dl>
+
+  <hr />
+
+  <dl>
+    <dt>Company</dt>
+    <dd>Bellhops</dd>
+    <dt>Position</dt>
+    <dd>Django Developer</dd>
+    <dt>Type</dt>
+    <dd>Full-time</dd>
+    <dt>Technologies</dt>
+    <dd>Python, Django, PostgreSQL, AWS, Redis</dd>
+    <dt>Job Description</dt>
+    <dd>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+       <p>Close to 50m Americans move every year, and 3/4 (37m) are 'do-it-yourselfers'. Not because they want to do it themselves, but because they are price conscious and don't have an alternative in between begging friends to help or going through the hassle/cost of booking a traditional moving company.</p>
+
+<p>Bellhops is a tech-based, on-demand platform for moving help that provides a national, branded workforce of college students to help you move easily and affordably. Serving 130+ cities and growing. We've created an automated hiring, managing, and scheduling system that allows our customers to get the help they need from our workforce of college students. We pair program, practice TDD, and learn something new every day.</p>
+
+<p>We currently develop in Django, but we'd love to talk to any web developer who's eager to learn. We constantly rotate pair programming partners and love working with each other on creating new, exciting features. We'd love to meet another developer that we'd be excited to learn with. We develop with and contribute to open source software so candidates with open source contributions are especially desirable.</p>
+
+<p>This position is based in our headquarters in Chattanooga, TN. The city is home to the first municipal gigabit network in the nation, and was described by Outside Magazine as the best outdoor city in the country.</p>
+        <p>Check out the latest <a href="http://getbellhops.com/careers" target="_blank"><button type="button" class="btn btn-primary">jobs here</button></a></p>
+        <p>For more information please connect with <a href="https://www.linkedin.com/pub/adam-haney/13/318/b0b" target="_blank">Adam Haney</a></p>
+</dl>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+    </dd>
+    <dt>Updated</dt>
+    <dd>8/4/2015</dd>
+  </dl>
+  <hr />
+  <dl>
+    <dt>Company</dt>
+    <dd>Eventbrite</dd>
+    <dt>Position</dt>
+    <dd>Software Engineer</dd>
+    <dt>Type</dt>
+    <dd>Full-time</dd>
+    <dt>Technologies</dt>
+    <dd>Python, Django, MySQL, AWS, Redis, Backbone, Cassandra</dd>
+    <dt>Job Description</dt>
+    <dd>
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+        <p>At Eventbrite we are building technology to effortlessly create, manage, discover and attend live events ( think Black Eyed Peas Concert, Hangout Festival, HackNashville  ). We’re a <a href="http://bit.ly/pynash-funding" target="_blank">well funded</a> startup and have a strong business at the core doing over <b>$1 billion</b> in gross ticket sales through our platform in 2013.</p>
+        <p>We are growing rapidly and are looking for awesome developers to help us architect, build and mature our engineering capabilities.</p>
+        <p>Eventbrite loves Nashville and we want you to love us as well.  In addition to working with really cool technologies you can work with and learn from really smart people like <a href="http://bit.ly/pynash-simon" target="_blank">Simon Willson</a> the co-creator of the Django framework.  Its fun if you get stuck on a problem to ask the person that built it for help.  But wait... there's more :)  We offer <b>really great benefits</b> including:</p>
+        <ul>
+            <li>Stock Options - An equity stake in an already hot startup!</li>
+            <li>Catered lunches all week.</li>
+            <li>Medical/Dental/Vision - And it starts right after you start with us… no waiting!!</li>
+            <li>Lots more!  Want more details come talk with us!</li>
+        </ul>
+        <p>For more information please connect with <a href="https://www.linkedin.com/in/bryanmayes" target="_blank">Bryan Mayes</a></p>
+
+        <div style="height: 10px;"><!-- Hack in padding --></div>
+    </dd>
+    <dt>Posted</dt>
+    <dd>8/7/2015</dd>
+  </dl>
+  <hr />
+  <dl>
+    <dt>Company</dt>
+    <dd>SmileCareClub</dd>
+    <dt>Position</dt>
+    <dd>Senior Software Engineer</dd>
+    <dt>Type</dt>
+    <dd>Full-time</dd>
+    <dt>Technologies</dt>
+    <dd>Python 2, Django, AngularJS, Postgresql, AWS, Git</dd>
+    <dt>Job Description</dt>
+    <dd>
+        We are a $20mm funded startup by seasoned operators in highly regulated direct to consumer businesses.<br /><br />
+        If you are ready for a fun and challenging position where you will get the opportunity to build something from the ground up, you should <a href="https://smilecareclub.com">check us out!</a><br /><br />
+        Official Job Description available on request.<br /><br />
+        Contact: <a href="mailto:julie.barnick@smilecareclub.com">Julie Barnick</a>
+    </dd>
+    <dt>Posted</dt>
+    <dd>8/04/2015</dd>
+  </dl>
+</div>

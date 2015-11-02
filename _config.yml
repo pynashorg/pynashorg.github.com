@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://pynashorg.github.com
+url: http://pynash.org
 title: PyNash
 header-img: img/home-bg.jpg
 subtitle: Nashville Python User Group.
@@ -11,6 +11,7 @@ simple_search: http://google.com/search
 description: "PyNash is Nashville's local Python User Group."
 twitter_username: pynash
 github_username: pynashorg
+base_url: ./
 
 source:      .
 destination: ./_site

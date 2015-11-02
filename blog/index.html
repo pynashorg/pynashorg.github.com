@@ -1,11 +1,19 @@
 ---
-layout: default
-title: PyNash - The Nashville Python User Group
+layout: page
+title: Blog
+page_header: PyNash Blog
 ---
-<div class="row-fluid">
-    <ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> by {{post.author}}</li>
-    {% endfor %}
-</ul>
+{% for post in site.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
+{% endfor %}

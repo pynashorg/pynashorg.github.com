@@ -2,6 +2,7 @@
 layout: page
 title: Get Connected
 description: Connect with Nashville's Python community.
+header-img: img/pynash.jpg
 ---
 
 ### Meetups
@@ -46,3 +47,12 @@ You can reach the co-organizers via email or Twitter.
 * Bill Israel ([@epochblue](https://twitter.com/epochblue))
 * Brian Dailey ([@byeliad](https://twitter.com/byeliad))
 * Jason Myers ([@jasonamyers](https://twitter.com/jasonamyers))
+
+### Other Groups & Info
+
+Nashville has a very active tech community. Here are some resources that might
+be helpful if you're looking to connect.
+
+- [List of Nashville User Groups](http://groups.nashvillecode.org/)
+- [Nashville's Tech Event Calendar](http://cal.nashvl.org/)
+

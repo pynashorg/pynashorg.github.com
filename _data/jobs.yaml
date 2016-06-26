@@ -1,36 +1,11 @@
-- company: Maize Analytics
-  position: Django Developer
+- company: Stratasan
+  position: Operations Engineer
   type: Full-time
-  tech: Python, Django, SQL
+  tech: Python, Django, AWS, Redshift, PostgreSQL, Salt
   description: >
-          <p>Interested in working with a health IT company that is using machine learning to secure electronic medical records?</p>
-          <p>Maize Analytics plans to hire a Django developer to join their team. Maize is a funded, Nashville, TN company that is growing quickly.</p>
-          <p>This position will comprise of 70% development time and 30% customer interaction/technical troubleshooting.</p>
-          <p>Skills: <ul>
-             <li>Django (required)</li>
-             <li>SQL (required)</li>
-             <li>JavaScript (desired)</li>
-             <li>Virtual machine management such as Vagrant and Chef (desired)</li>
-             </ul></p>
+        <p>Stratasan is a Nashville-based company that provides intelligence on healthcare markets to hospital strategists, physician offices, community care experts, and others. We aggregate healthcare data, curate it, and provide reports and tools that aid healthcare decision-making. As an example, we give guidance to our clients looking to place a new acute care clinic.</p>
+        <p>You will be acting as a friction-reducer and stability-enhancer, allowing our development team to focus on building out new features and improving our existing set of applications.</p>
+        <p>Ideally, you will help us keep up with industry best practices and help us to adopt new tools that will help us as they mature.</p>
+        <p>For more information please check out the full details on the <a href="http://stratasan.com/about/careers/#ops">Stratasan jobs page</a>.</p>
 
-             <p>Send your resume to <a href="mailto:info@maizeanalytics.com">info@maizeanalytics</a> if interested.</p>
-
-  posted: 2/15/2016
-
-- company: Eventbrite
-  position: Software Engineer
-  type: Full-time
-  tech: Python, Django, MySQL, AWS, Redis, Backbone, Cassandra
-  description: >
-        <p>At Eventbrite we are building technology to effortlessly create, manage, discover and attend live events ( think Black Eyed Peas Concert, Hangout Festival, HackNashville  ). We’re a <a href="http://bit.ly/pynash-funding" target="_blank">well funded</a> startup and have a strong business at the core doing over <b>$1 billion</b> in gross ticket sales through our platform in 2013.</p>
-        <p>We are growing rapidly and are looking for awesome developers to help us architect, build and mature our engineering capabilities.</p>
-        <p>Eventbrite loves Nashville and we want you to love us as well.  In addition to working with really cool technologies you can work with and learn from really smart people like <a href="http://bit.ly/pynash-simon" target="_blank">Simon Willson</a> the co-creator of the Django framework.  Its fun if you get stuck on a problem to ask the person that built it for help.  But wait... there's more :)  We offer <b>really great benefits</b> including:</p>
-        <ul>
-            <li>Stock Options - An equity stake in an already hot startup!</li>
-            <li>Catered lunches all week.</li>
-            <li>Medical/Dental/Vision - And it starts right after you start with us… no waiting!!</li>
-            <li>Lots more!  Want more details come talk with us!</li>
-        </ul>
-        <p>For more information please connect with <a href="https://www.linkedin.com/in/bryanmayes" target="_blank">Bryan Mayes</a></p>
-
-  posted: 8/7/2015
+  posted: 06/23/2016

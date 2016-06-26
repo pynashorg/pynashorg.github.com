@@ -21,3 +21,4 @@ highlighter: pygments
 permalink: pretty
 paginate: 5
 exclude: ["README.md"]
+gems: [jekyll-paginate]

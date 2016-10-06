@@ -9,14 +9,3 @@
         <p>Send your resume to <a href="mailto:info@maizeanalytics.com">info@maizeanalytics.com</a> if interested.</p>
 
   posted: 10/04/2016
-- company: Stratasan
-  position: Operations Engineer
-  type: Full-time
-  tech: Python, Django, AWS, Redshift, PostgreSQL, Salt
-  description: >
-        <p>Stratasan is a Nashville-based company that provides intelligence on healthcare markets to hospital strategists, physician offices, community care experts, and others. We aggregate healthcare data, curate it, and provide reports and tools that aid healthcare decision-making. As an example, we give guidance to our clients looking to place a new acute care clinic.</p>
-        <p>You will be acting as a friction-reducer and stability-enhancer, allowing our development team to focus on building out new features and improving our existing set of applications.</p>
-        <p>Ideally, you will help us keep up with industry best practices and help us to adopt new tools that will help us as they mature.</p>
-        <p>For more information please check out the full details on the <a href="http://stratasan.com/about/careers/#ops">Stratasan jobs page</a>.</p>
-
-  posted: 06/23/2016

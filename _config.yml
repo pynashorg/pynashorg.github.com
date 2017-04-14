@@ -17,7 +17,7 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude: ["README.md"]

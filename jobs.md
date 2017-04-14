@@ -7,7 +7,7 @@ description: Python Jobs in Nashville
 ### Python Jobs in Nashville
 
 To add a job, make a [Pull Request](https://github.com/pynashorg/pynashorg.github.com)
-or email [Jason](https://github.com/pynashorg/pynashorg.github.com). The job must be based
+or email [the organizers](mailto:pynash.organizers@gmail.com). The job must be based
 in Nashville, and you must be employed within the organization. It will live for
 30 days unless you resubmit it.
 

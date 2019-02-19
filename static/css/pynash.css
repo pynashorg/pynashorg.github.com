@@ -1,0 +1,43 @@
+html { background-color: #efefef; font-size: 16px; }
+
+body {
+  background: url(/static/img/pattern.gif) repeat;
+  color: #333;
+  font: normal 1rem/1.5 "Source Code Pro", "Menlo", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 { font-weight: normal; }
+h2 span, h3 span { background: #333; color: #efefef; padding: 0 0.1rem; }
+
+a { color: #333; background: #28e2ff; padding: 0 0.1rem; text-decoration: underline; }
+a:focus, a:hover { text-decoration: none; }
+
+header { margin: 0 0 3rem; }
+header h1 { margin: 0; padding: 0; }
+header a { background: none; }
+
+.container { background: #fff; margin: 0 auto; padding: 0 1rem; width: 65%; }
+
+.connect { margin: 3rem 0; }
+.connect ul { list-style-type: none; padding: 0; }
+.connect ul li:first-child { margin-right: 0.5rem; }
+.connect ul li { display: inline; margin-right: 1rem; }
+
+.next-event { margin: 4.5rem 0; }
+
+.cards { align-items: flex-start; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.card { width: 30%; }
+
+.code-of-conduct { margin: 3rem 0; }
+
+footer { color: #aaa; font-size: 0.75rem; margin: 3rem 0 0; padding: 0 0 1.5rem; }
+
+@media (max-width : 1023px) {
+  header { margin: 0 0 1.5rem; }
+  .container { width: 85%; }
+  .connect ul li:first-child { display: block; }
+  .cards { flex-direction: column; justify-content: center; }
+  .card { width: 100%; }
+}

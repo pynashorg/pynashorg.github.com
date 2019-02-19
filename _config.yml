@@ -1,0 +1,16 @@
+title: Nashville and Middle Tennessee's Python User Group
+email: pynash.organizers@gmail.com
+short_name: PyNash
+
+baseurl: ""
+url: "https://pynash.org"
+twitter_username: pynash
+
+timezone: America/Chicago
+
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

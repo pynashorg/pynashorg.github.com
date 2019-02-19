@@ -1,41 +1,26 @@
 # pynashorg.github.com
 
-This is the PyNash web site, now live at:
-* http://pynashorg.github.com
-* http://pynash.org
+This is the website for the PyNash user group.
+PyNash is a Nashville and Middle Tennessee community of people who use Python for business or pleasure.
+We welcome people of all experience and skill levels.
+Visit the site at [https://pynash.org/](https://pynash.org/).
 
 
-## How to add a blog post
+## Installation
 
-Add a file in the `_posts` directory.
+### Prerequisites
+
+1. Ensure you have at least Ruby 2.1.0 installed by running `ruby --version`.
+2. Install `bundler` by running `gem install bundler`
+
+### Steps
+
+1. Clone this repository.
+2. Ensure all the dependencies are installed by running `bundle install`
+3. Build and view the site locally by running `bundle exec jekyll serve` and pointing your browser to `http://localhost:4000/`.
 
 
-## How to run this site on your machine (without affecting the system ruby install)
+## How to Contribute
 
-1. If you haven't already, clone this repo.
-2. If you haven't already got it, install rvm and enable it in your shell. (I installed it in my home directory and it worked fine.)
-3. Create a "gemset" just for pynashorg. (This is like the part of a virtualenv sandbox that holds installed modules.)
-4. "Use" the new gemset.
-5. Install jekyll in the gemset.
-6. Run jekyll.
-
-Here are the commands I used.
-If you&rsquo;re on Windows, these commands won&rsquo;t work for you.
-
-    git clone git://github.com/pynashorg/pynashorg.github.com.git
-    cd pynashorg.github.com
-    \curl -L https://get.rvm.io | bash -s stable --ruby
-    . ~/.rvm/scripts/rvm
-    rvm gemset create pynashorg
-    rvm use @pynashorg
-    gem install jekyll
-    jekyll --server --auto ( more recent versions (2.5.3) are using: `$ jekyll serve --watch`)
-
-Ctrl-C to kill it.
-
-Now that everything&rsquo;s set up, you just need two commands:
-
-    rvm use @pynashorg
-    jekyll --server --auto
-
-If you need help, contact jason dot orendorff at gmail.
+Modifications to this site are welcome and encouraged.
+If you see something you think needs to be changed or fixed, please feel free to open a pull request and let us know.

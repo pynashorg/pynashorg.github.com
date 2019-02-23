@@ -32,6 +32,12 @@ header a { background: none; }
 
 .code-of-conduct { margin: 3rem 0; }
 
+.post-preview { list-style-type: none; padding: 0; }
+.post-preview h2 { margin-bottom: 0; }
+.post-preview p { margin: 0 0 1.5rem; }
+.post-title { font-size: 2rem; }
+.highlight { background-color: #eee; margin: 0 -1rem; padding: 0.75rem 1rem; }
+
 footer { color: #aaa; font-size: 0.75rem; margin: 3rem 0 0; padding: 0 0 1.5rem; }
 
 @media (max-width : 1023px) {

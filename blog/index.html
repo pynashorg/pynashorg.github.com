@@ -1,0 +1,12 @@
+---
+layout: base
+title: Blog
+---
+<ul class="post-preview">
+{% for post in site.posts %}
+  <li>
+    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p>Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+  </li>
+{% endfor %}
+</ul>

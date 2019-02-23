@@ -1,34 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width">
-
-  <title>PyNash: {% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/pynash.css" type="text/css">
-</head>
-<body class="pynash">
-  <div class="container">
-    <header>
-      <h1><a href="/"><img src="/static/img/pynash.svg" alt="pynash wordmark"></a></h1>
-    </header>
+{% include header.html %}
 
     {{ content }}
 
-    <footer>
-      <p>
-        This site's content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
-        and its source code is available on <a href="https://github.com/pynashorg/pynashorg.github.com">Github</a>.
-      </p>
-    </footer>
-  </div>
-
-  {% if page.include_scripts %}
-  <script src="/static/js/pynash.js"></script>
-  <script src="https://api.meetup.com/pynash/events?format=json&page=1&sig_id=215201845&callback=meetupInfo&sig=598c31812af0d7b9fb3e10749608b434535fc596"></script>
-  {% endif %}
-</body>
-</html>
+{% include footer.html %}

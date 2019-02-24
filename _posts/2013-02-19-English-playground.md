@@ -10,7 +10,7 @@ painting
 [*Venus, Cupid, Folly and Time*](https://en.wikipedia.org/wiki/Venus,_Cupid,_Folly,_and_Time).
 
 <figure>
-  <img src="/images/blog-content/venus-cupid.jpg">
+  <img src="/static/img/blog/venus-cupid.jpg">
 </figure>
 
 It&rsquo;s considered a Mannerist masterpiece, packed with allegorical
@@ -138,7 +138,7 @@ That part is not very interesting, so we&rsquo;ll skip it.
 You now have all the information. **What is this code doing?**
 
 <figure>
-  <img src="/images/blog-content/monty-foot.jpg">
+  <img src="/static/img/blog/monty-foot.jpg">
   <figcaption>Hint: It&rsquo;s rather silly.</figcaption>
 </figure>
 

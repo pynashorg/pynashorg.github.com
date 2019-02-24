@@ -26,7 +26,7 @@ I wrote a talk submission form for a local event recently.
 It unhelpfully suggested a random talk idea, just for laughs:
 
 <figure>
-  <img src="/images/blog-content/random-idea.png">
+  <img src="/static/img/blog/random-idea.png">
 </figure>
 
 [Here&rsquo;s the Python code](https://gist.github.com/4659406)

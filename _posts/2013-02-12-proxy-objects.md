@@ -58,7 +58,7 @@ which is part of Flask.
 ## How to build your own squid-headed monster
 
 <figure>
-  <img src="/images/blog-content/lego-monster.jpg">
+  <img src="/static/img/blog/lego-monster.jpg">
   <figcaption>&hellip;because why wouldn&rsquo;t you want to create your very own?</figcaption>
 </figure>
 
@@ -140,7 +140,7 @@ until the next request comes along.
 This is inherently a somewhat schizophrenic thing for an object to be doing.
 
 <figure>
-  <img src="/images/blog-content/cthulhu-doctor.jpg">
+  <img src="/static/img/blog/cthulhu-doctor.jpg">
   <figcaption>just a friendly <code>Doctor</code> object</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ like `print obj` or `obj.__class__`
 will lie to you, betraying no hint that the proxy is there!
 
 <figure>
-  <img src="/images/blog-content/nobody-expects.jpg">
+  <img src="/static/img/blog/nobody-expects.jpg">
   <figcaption>like the Spanish Inquisition, nooooooobody expects a proxy</figcaption>
 </figure>
 

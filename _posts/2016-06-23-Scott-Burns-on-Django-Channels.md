@@ -5,8 +5,6 @@ author: Brian Dailey
 comments: true
 ---
 
-![PyNash June 2016 Meetup](/img/meetups/2016-06-23.jpg)
-
 Thanks to [The Iron Yard Nashville](https://www.theironyard.com/locations/nashville.html) for hosting us this month!
 
 Scott Burns gave a talk about Django Channels.

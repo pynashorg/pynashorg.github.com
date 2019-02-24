@@ -135,7 +135,7 @@ Finally, we have our normalized downloads per version per day metric. Obviously,
     plt.show()
 
 <figure>
-    <img src="/images/blog-content/pycap-dl.png">
+    <img src="/static/img/blog/pycap-dl.png">
 </figure>
 
 I'll leave interpretation as an exercise to the reader. If you work with any type of data in python, I highly recommend taking a look at `pandas`, I've only scratched the surface of what it can do here. Personally, I've been able to erase lots of ugly data import code and for that alone I'm thankful.

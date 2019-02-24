@@ -23,7 +23,7 @@ to bring teams together.
 With the addition of Missouri this fall, the SEC will have 14 teams:
 
 <figure>
-  <img src="/images/blog-content/sec-map-1.png">
+  <img src="/static/img/blog/sec-map-1.png">
 </figure>
 
 What we need is the minimum road network
@@ -40,7 +40,7 @@ any two of which are either connected by an edge or not.
 When you draw one on paper, it looks like one of these:
 
 <figure>
-  <img src="/images/blog-content/many-graphs.png">
+  <img src="/static/img/blog/many-graphs.png">
 </figure>
 
 But they&rsquo;re not just silly math pictures.
@@ -186,7 +186,7 @@ Using this function on the SEC data set is a piece of cake:
 The resulting map:
 
 <figure>
-  <img src="/images/blog-content/sec-map-2.png">
+  <img src="/static/img/blog/sec-map-2.png">
 </figure>
 
 This tree requires the SEC to hold 2,359 miles of road.

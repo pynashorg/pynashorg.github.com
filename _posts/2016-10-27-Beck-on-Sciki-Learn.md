@@ -5,10 +5,6 @@ author: Brian Dailey
 comments: true
 ---
 
-<div class="row" style="width:550px; margin: 0px auto;">
-<img src="/img/meetups/2016-10.jpg" style="float:left;"><img src="/img/meetups/2016-10-2.jpg" style="float:left;">
-</div>
-
 Thanks to [Emma](https://www.myemma.com/) for hosting us this month!
 
 For our last talk of the year, [Beck Cronin-Dixon](http://beckcd.com/) of Eventbrite gave a talk on scikit-learn.

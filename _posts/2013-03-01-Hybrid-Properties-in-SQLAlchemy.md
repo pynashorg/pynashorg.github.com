@@ -75,9 +75,9 @@ and add our data to the database.
     db = Session()
     
     db.add(order1)
-    db.add(order1)
-    db.add(order1)
-    db.add(order1)
+    db.add(order2)
+    db.add(order3)
+    db.add(order4)
     db.commit()
      
 Okay finally, let's use our hybrid property in a simple query. 

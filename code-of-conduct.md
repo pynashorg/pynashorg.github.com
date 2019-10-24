@@ -2,7 +2,6 @@
 title: Code of Conduct
 layout: base
 permalink: code-of-conduct
-include_scripts: false
 ---
 
 ## <span>Code of Conduct</span>

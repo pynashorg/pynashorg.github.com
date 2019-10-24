@@ -20,7 +20,7 @@ header a { background: none; }
 
 .container { background: #fff; margin: 0 auto; padding: 0 1rem; width: 65%; }
 
-.connect { margin: 3rem 0; }
+.connect { border: 1px solid #ccc; border-width: 1px 0; font-size: 1.2rem; margin: 1.5rem 0; }
 .connect ul { list-style-type: none; padding: 0; }
 .connect ul li:first-child { margin-right: 0.5rem; }
 .connect ul li { display: inline; margin-right: 1rem; }

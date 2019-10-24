@@ -2,7 +2,6 @@
 title: Sponsorship Prospectus
 layout: base
 permalink: sponsorship-prospectus
-include_scripts: false
 ---
 
 ## <span>PyNash Sponsorship Prospectus</span>

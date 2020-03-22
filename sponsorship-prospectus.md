@@ -42,3 +42,10 @@ We'll get back to you as quickly as we can to ensure you get the most for your s
 
 Not all sponsorships require money, and not all potential sponsors have extra money lying around.
 If you would like to sponsor but cannot afford the sponsorship above, please [contact us](mailto:{{ site.email }}?subject=[PyNash] Interested in in-kind sponsorship) to discuss an in-kind agreement instead.
+
+## <span>How the money is used</span>
+
+Most of our sponsorship money each month goes to purchasing food to feed our meetup attendees.
+This includes the food itself as well as other necessary items such as plates, cups, napkins, flatware, etc.
+Any money that is not spent directly on the sponsored meetup will be placed into the PyNash account and used for things like domain registration, Meetup fees, hosting services, and other costs directly associated with running PyNash.
+The sponsorship money given to PyNash is _never_ put into anyone's personal bank accounts and is _never_ used for anything other than PyNash-specific expenses.

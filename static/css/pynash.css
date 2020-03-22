@@ -27,8 +27,6 @@ header a { background: none; }
 .connect ul li:first-child { margin-right: 0.5rem; }
 .connect ul li { display: inline; margin-right: 1rem; }
 
-.next-event { margin: 4.5rem 0; }
-
 .cards { align-items: flex-start; display: flex; justify-content: space-between; flex-wrap: wrap; }
 .card { width: 30%; }
 

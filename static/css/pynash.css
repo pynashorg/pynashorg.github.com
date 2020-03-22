@@ -20,7 +20,7 @@ header a { background: none; }
 
 .container { background: #fff; margin: 0 auto; padding: 0 1rem; width: 65%; }
 
-.alert { background: #ff4528; font-weight: bold; padding: 1.5rem 3rem; }
+.alert { background: #ff4528; font-weight: bold; margin: auto -1rem; padding: 1.5rem 3rem; }
 
 .connect { border: 1px solid #ccc; border-width: 1px 0; font-size: 1.2rem; margin: 1.5rem 0; }
 .connect ul { list-style-type: none; padding: 0; }
